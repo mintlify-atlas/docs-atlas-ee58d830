@@ -1,0 +1,153 @@
+{
+  "projectType": "saas",
+  "projectName": "Gargobarb",
+  "projectDescription": "A complete barbershop management platform with custom site builder, appointment booking, and multi-role access for admins, barbers, and clients.",
+  "theme": "almond",
+  "primaryColor": "#facc15",
+  "lightColor": "#fef3c7",
+  "darkColor": "#ca8a04",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Get Started",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": ["introduction", "quickstart"]
+          },
+          {
+            "group": "User Roles",
+            "pages": ["roles/overview", "roles/admin", "roles/barber", "roles/client"]
+          }
+        ]
+      },
+      {
+        "tab": "For Barbers",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": ["barbers/overview", "barbers/creating-barbershop"]
+          },
+          {
+            "group": "Site Builder",
+            "pages": ["barbers/builder/overview", "barbers/builder/components", "barbers/builder/templates", "barbers/builder/preview"]
+          },
+          {
+            "group": "Managing Your Business",
+            "pages": ["barbers/services", "barbers/appointments", "barbers/schedule", "barbers/dashboard"]
+          },
+          {
+            "group": "Payments",
+            "pages": ["barbers/payment-gateway", "barbers/sales-tracking"]
+          }
+        ]
+      },
+      {
+        "tab": "For Clients",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": ["clients/overview", "clients/registration"]
+          },
+          {
+            "group": "Booking",
+            "pages": ["clients/finding-barbershops", "clients/booking-appointment", "clients/payment-checkout"]
+          }
+        ]
+      },
+      {
+        "tab": "For Admins",
+        "groups": [
+          {
+            "group": "Platform Management",
+            "pages": ["admins/overview", "admins/managing-users", "admins/managing-barbershops"]
+          },
+          {
+            "group": "Analytics & Reports",
+            "pages": ["admins/reports", "admins/analytics"]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": ["api/auth/overview", "api/auth/register", "api/auth/login", "api/auth/google-oauth"]
+          },
+          {
+            "group": "Users",
+            "pages": ["api/users/get-profile", "api/users/update-profile"]
+          },
+          {
+            "group": "Barbershops",
+            "pages": ["api/barbershops/create", "api/barbershops/list", "api/barbershops/get-by-id", "api/barbershops/update", "api/barbershops/delete", "api/barbershops/public-view"]
+          },
+          {
+            "group": "Services",
+            "pages": ["api/services/create", "api/services/list", "api/services/update", "api/services/delete"]
+          },
+          {
+            "group": "Appointments",
+            "pages": ["api/appointments/create", "api/appointments/list", "api/appointments/update-status", "api/appointments/cancel"]
+          },
+          {
+            "group": "Site Builder",
+            "pages": ["api/site/create", "api/site/get-design", "api/site/update-section", "api/site/templates", "api/site/uploads"]
+          },
+          {
+            "group": "Sales",
+            "pages": ["api/sales/create", "api/sales/list", "api/sales/analytics"]
+          },
+          {
+            "group": "Admin",
+            "pages": ["api/admin/users", "api/admin/barbershops", "api/admin/reports"]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Multi-role authentication system with Admin, Barber, and Client access levels",
+    "Custom barbershop site builder with drag-and-drop components and templates",
+    "Real-time appointment booking and scheduling management",
+    "Integrated payment processing with Stripe for services and appointments",
+    "Google OAuth authentication for seamless user registration",
+    "Public barbershop pages accessible via custom slugs",
+    "Service catalog management for barbers",
+    "Admin dashboard for platform-wide user and barbershop management",
+    "Geolocation features for finding nearby barbershops",
+    "Sales tracking and analytics for barbers"
+  ],
+  "publicApiSurface": [
+    "POST /api/auth/register - Register new user",
+    "POST /api/auth/login - Login with credentials",
+    "POST /api/auth/google - Google OAuth login",
+    "GET /api/users/profile - Get user profile",
+    "PUT /api/users/profile - Update user profile",
+    "POST /api/barbershops - Create barbershop",
+    "GET /api/barbershops - List barbershops",
+    "GET /api/barbershops/:id - Get barbershop by ID",
+    "PUT /api/barbershops/:id - Update barbershop",
+    "DELETE /api/barbershops/:id - Delete barbershop",
+    "GET /api/b/:slug - Public barbershop view by slug",
+    "POST /api/services - Create service",
+    "GET /api/services/:barbershopId - List services for barbershop",
+    "PUT /api/services/:id - Update service",
+    "DELETE /api/services/:id - Delete service",
+    "POST /api/appointments - Create appointment",
+    "GET /api/appointments - List appointments",
+    "PUT /api/appointments/:id - Update appointment status",
+    "DELETE /api/appointments/:id - Cancel appointment",
+    "POST /api/barber/design/site - Create barbershop site",
+    "GET /api/barber/design/site/:barbershopId - Get site design",
+    "PUT /api/barber/design/section - Update site section",
+    "GET /api/templates - Get site templates",
+    "POST /api/uploads/site - Upload site assets",
+    "POST /api/sales - Create sale record",
+    "GET /api/sales/:barbershopId - List sales for barbershop",
+    "GET /api/admin/users - Admin: List all users",
+    "GET /api/admin/barbershops - Admin: List all barbershops",
+    "GET /api/admin/reports - Admin: Generate reports"
+  ]
+}
